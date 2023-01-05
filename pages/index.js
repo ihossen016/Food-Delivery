@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Contact from "../components/Contact";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 
@@ -19,6 +19,8 @@ export default function Home() {
             <main>
                 <Navbar />
                 <Hero />
+
+                <Contact />
             </main>
         </>
     );
