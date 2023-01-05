@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;900&display=swap");
 
 :root {
     --bg-dark: #0c1712;
@@ -115,6 +115,44 @@ section {
     cursor: pointer;
 }
 /* Hero Section End */
+
+/* Blog Section Start */
+#blog-section {
+    padding: 100px 0;
+}
+#blog-section h3 {
+    font-size: 24px;
+    font-weight: 500;
+    padding-bottom: 28px;
+}
+#blogs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+#blog-left,
+#blog-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.desc {
+    padding: 15px 20px;
+}
+.desc h4 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    padding-bottom: 8px;
+}
+.desc p {
+    font-size: 12px;
+    font-weight: 300;
+}
+/* Blog Section End */
 
 /* Contact Section Start */
 #contact-section {
