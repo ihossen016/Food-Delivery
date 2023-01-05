@@ -3,6 +3,7 @@
 :root {
     --bg-dark: #0c1712;
     --bg-light: #f7f8fa;
+    --bg-green: #1ac073;
     --yellow: #f3ba00;
     --black: #101115;
 }
@@ -163,3 +164,27 @@ section {
     outline: none;
 }
 /* Contact Section End */
+
+/* Footer Section Start */
+#footer-section {
+    background: var(--bg-green);
+    color: #fff;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #fff;
+}
+#footer-icons {
+    font-size: 20px;
+    display: flex;
+    gap: 12px;
+}
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 0;
+}
+/* Footer Section End */
