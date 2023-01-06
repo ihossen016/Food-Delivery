@@ -1,8 +1,11 @@
 import Image from "next/image";
+import { useSelector } from "react-redux";
 import { FiSearch } from "react-icons/fi";
 import { BsHandbag } from "react-icons/bs";
 
 const Navbar = () => {
+    const cartItems = useSelector(state => state.cart);
+
     return (
         <section id="nav-section">
             <nav id="navbar" className="container">
@@ -26,7 +29,7 @@ const Navbar = () => {
                     </div>
                     <div id="cart-icon">
                         <BsHandbag />
-                        <p id="count">0</p>
+                        <p id="count">{cartItems.length}</p>
                     </div>
                 </div>
             </nav>
