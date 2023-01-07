@@ -5,7 +5,12 @@ import { FaPlusSquare } from "react-icons/fa";
 const ProductCard = ({ img, title, price }) => {
     return (
         <div className="product-card">
-            <Image src={img} alt={title} width={277} height={250} />
+            <Image
+                src={`/api/imageproxy?url=${encodeURIComponent(img)}`}
+                alt={title}
+                width={277}
+                height={250}
+            />
             <div className="product-desc">
                 <div className="top">
                     <h4>{title}</h4>
