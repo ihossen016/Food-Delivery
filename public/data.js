@@ -1,1 +1,1 @@
-export const baseUrl = "munchies-api.up.railway.app";
+export const baseUrl = "https://munchies-api.up.railway.app";

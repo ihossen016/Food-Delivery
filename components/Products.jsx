@@ -1,8 +1,19 @@
-import Image from "next/image";
-import { AiFillStar } from "react-icons/ai";
-import { FaPlusSquare } from "react-icons/fa";
+import axios from "axios";
+import useSWR from "swr";
+import { useEffect, useState } from "react";
+import ProductCard from "./ProductCard";
+import { baseUrl } from "../public/data";
 
 const Products = () => {
+    const url = `${baseUrl}/products/`;
+    const [products, setProducts] = useState([]);
+    const fetcher = async url => await axios.get(url).then(res => res.data);
+    const { data, error } = useSWR(url, fetcher);
+
+    useEffect(() => {
+        if (data) setProducts(data);
+    }, [data, setProducts]);
+
     return (
         <section id="products-section">
             <div className="container">
@@ -22,206 +33,15 @@ const Products = () => {
                 </select>
 
                 <div className="products">
-                    <div className="product-card">
-                        <Image
-                            src="/images/b1.png"
-                            alt="name"
-                            width={277}
-                            height={250}
-                        />
-                        <div className="product-desc">
-                            <div className="top">
-                                <h4>Title</h4>
-                                <p>$14</p>
-                            </div>
-                            <div className="bottom">
-                                <div className="star">
-                                    <p>
-                                        <AiFillStar /> 4.7
-                                    </p>
-                                    <p>50-79 min</p>
-                                </div>
-                                <button className="add-to-cart">
-                                    <FaPlusSquare />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product-card">
-                        <Image
-                            src="/images/b1.png"
-                            alt="name"
-                            width={277}
-                            height={250}
-                        />
-                        <div className="product-desc">
-                            <div className="top">
-                                <h4>Title</h4>
-                                <p>$14</p>
-                            </div>
-                            <div className="bottom">
-                                <div className="star">
-                                    <p>
-                                        <AiFillStar /> 4.7
-                                    </p>
-                                    <p>50-79 min</p>
-                                </div>
-                                <button className="add-to-cart">
-                                    <FaPlusSquare />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product-card">
-                        <Image
-                            src="/images/b1.png"
-                            alt="name"
-                            width={277}
-                            height={250}
-                        />
-                        <div className="product-desc">
-                            <div className="top">
-                                <h4>Title</h4>
-                                <p>$14</p>
-                            </div>
-                            <div className="bottom">
-                                <div className="star">
-                                    <p>
-                                        <AiFillStar /> 4.7
-                                    </p>
-                                    <p>50-79 min</p>
-                                </div>
-                                <button className="add-to-cart">
-                                    <FaPlusSquare />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product-card">
-                        <Image
-                            src="/images/b1.png"
-                            alt="name"
-                            width={277}
-                            height={250}
-                        />
-                        <div className="product-desc">
-                            <div className="top">
-                                <h4>Title</h4>
-                                <p>$14</p>
-                            </div>
-                            <div className="bottom">
-                                <div className="star">
-                                    <p>
-                                        <AiFillStar /> 4.7
-                                    </p>
-                                    <p>50-79 min</p>
-                                </div>
-                                <button className="add-to-cart">
-                                    <FaPlusSquare />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product-card">
-                        <Image
-                            src="/images/b1.png"
-                            alt="name"
-                            width={277}
-                            height={250}
-                        />
-                        <div className="product-desc">
-                            <div className="top">
-                                <h4>Title</h4>
-                                <p>$14</p>
-                            </div>
-                            <div className="bottom">
-                                <div className="star">
-                                    <p>
-                                        <AiFillStar /> 4.7
-                                    </p>
-                                    <p>50-79 min</p>
-                                </div>
-                                <button className="add-to-cart">
-                                    <FaPlusSquare />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product-card">
-                        <Image
-                            src="/images/b1.png"
-                            alt="name"
-                            width={277}
-                            height={250}
-                        />
-                        <div className="product-desc">
-                            <div className="top">
-                                <h4>Title</h4>
-                                <p>$14</p>
-                            </div>
-                            <div className="bottom">
-                                <div className="star">
-                                    <p>
-                                        <AiFillStar /> 4.7
-                                    </p>
-                                    <p>50-79 min</p>
-                                </div>
-                                <button className="add-to-cart">
-                                    <FaPlusSquare />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product-card">
-                        <Image
-                            src="/images/b1.png"
-                            alt="name"
-                            width={277}
-                            height={250}
-                        />
-                        <div className="product-desc">
-                            <div className="top">
-                                <h4>Title</h4>
-                                <p>$14</p>
-                            </div>
-                            <div className="bottom">
-                                <div className="star">
-                                    <p>
-                                        <AiFillStar /> 4.7
-                                    </p>
-                                    <p>50-79 min</p>
-                                </div>
-                                <button className="add-to-cart">
-                                    <FaPlusSquare />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product-card">
-                        <Image
-                            src="/images/b1.png"
-                            alt="name"
-                            width={277}
-                            height={250}
-                        />
-                        <div className="product-desc">
-                            <div className="top">
-                                <h4>Title</h4>
-                                <p>$14</p>
-                            </div>
-                            <div className="bottom">
-                                <div className="star">
-                                    <p>
-                                        <AiFillStar /> 4.7
-                                    </p>
-                                    <p>50-79 min</p>
-                                </div>
-                                <button className="add-to-cart">
-                                    <FaPlusSquare />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    {products &&
+                        products.map(product => (
+                            <ProductCard
+                                key={product.id}
+                                title={product.name}
+                                img={product.image}
+                                price={product.price}
+                            />
+                        ))}
                 </div>
 
                 <div id="more">
