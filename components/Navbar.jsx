@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useSelector } from "react-redux";
 import { FiSearch } from "react-icons/fi";
 import { BsHandbag } from "react-icons/bs";
+import Link from "next/link";
 
 const Navbar = () => {
     const cartItems = useSelector(state => state.cart.items);
@@ -28,7 +29,9 @@ const Navbar = () => {
                         <FiSearch />
                     </div>
                     <div id="cart-icon">
-                        <BsHandbag />
+                        <Link href="/cart">
+                            <BsHandbag />
+                        </Link>
                         <p id="count">{cartItems.length}</p>
                     </div>
                 </div>

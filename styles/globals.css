@@ -52,6 +52,9 @@ section {
     align-items: flex-start;
     cursor: pointer;
 }
+#cart-icon a {
+    color: #fff;
+}
 #count {
     margin-left: -8px;
     display: flex;
