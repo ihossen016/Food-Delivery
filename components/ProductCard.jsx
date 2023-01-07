@@ -2,7 +2,7 @@ import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
 import { FaPlusSquare } from "react-icons/fa";
 
-const ProductCard = ({ img, title, price }) => {
+const ProductCard = ({ id, img, title, price, handleCart }) => {
     return (
         <div className="product-card">
             <Image
@@ -23,7 +23,10 @@ const ProductCard = ({ img, title, price }) => {
                         </p>
                         <p>50-79 min</p>
                     </div>
-                    <button className="add-to-cart">
+                    <button
+                        onClick={() => handleCart(id)}
+                        className="add-to-cart"
+                    >
                         <FaPlusSquare />
                     </button>
                 </div>

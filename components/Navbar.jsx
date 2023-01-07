@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 import { BsHandbag } from "react-icons/bs";
 
 const Navbar = () => {
-    const cartItems = useSelector(state => state.cart);
+    const cartItems = useSelector(state => state.cart.items);
 
     return (
         <section id="nav-section">
