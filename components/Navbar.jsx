@@ -10,12 +10,15 @@ const Navbar = () => {
     return (
         <section id="nav-section">
             <nav id="navbar" className="container">
-                <Image
-                    src="/images/logo.png"
-                    alt="Munchies"
-                    width={128}
-                    height={65}
-                />
+                <Link href="/">
+                    <Image
+                        src="/images/logo.png"
+                        alt="Munchies"
+                        width={128}
+                        height={65}
+                    />
+                </Link>
+
                 <ul id="nav-links">
                     <li>Home</li>
                     <li>About</li>

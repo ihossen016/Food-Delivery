@@ -222,6 +222,7 @@ section {
     background: none;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 #more {
     padding-top: 100px;
@@ -349,3 +350,33 @@ section {
     padding: 10px 0;
 }
 /* Footer Section End */
+
+/* Cart Page Start */
+#cart-section {
+    padding: 70px 0;
+}
+#cart-section table {
+    width: 100%;
+    margin: 50px 0;
+}
+#cart-section table,
+th,
+td {
+    border: 1px solid var(--black);
+    text-align: center;
+    border-collapse: collapse;
+}
+#cart-section th,
+td {
+    padding: 10px 0;
+}
+#cart-total {
+    width: 100%;
+    padding: 0 50px;
+    font-weight: 500;
+    text-align: right;
+}
+#cart-section .item-remove {
+    cursor: pointer;
+}
+/* Cart Page End */

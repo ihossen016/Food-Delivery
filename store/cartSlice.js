@@ -62,8 +62,28 @@ const cartSlice = createSlice({
                 });
             }
         },
+
         remove(state, action) {
-            return state.items.filter(item => item.id !== action.payload);
+            // calculate total
+            state.items.filter(item => {
+                if (item.id === action.payload) {
+                    state.calculation.price -= item.price * item.quantity;
+                    state.calculation.vat -= Math.floor(
+                        item.price * item.quantity * (item.vat / 100)
+                    );
+                    state.calculation.total -=
+                        item.price * item.quantity +
+                        Math.floor(
+                            item.price * item.quantity * (item.vat / 100)
+                        );
+                }
+            });
+
+            // remove item
+            const filteredItems = state.items.filter(
+                item => item.id !== action.payload
+            );
+            state.items = [...filteredItems];
         },
     },
 });
