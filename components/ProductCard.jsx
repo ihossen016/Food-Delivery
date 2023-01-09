@@ -14,7 +14,7 @@ const ProductCard = ({ id, img, title, price, handleCart }) => {
             <div className="product-desc">
                 <div className="top">
                     <h4>{title}</h4>
-                    <p>${price}</p>
+                    <p>BDT {price}</p>
                 </div>
                 <div className="bottom">
                     <div className="star">

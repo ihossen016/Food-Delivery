@@ -5,6 +5,7 @@ import { remove, clearALL } from "../store/cartSlice";
 import { useState } from "react";
 import { baseUrl } from "../public/data";
 import axios from "axios";
+import Link from "next/link";
 
 const cart = () => {
     const orderUrl = `${baseUrl}/order/`;
@@ -118,6 +119,7 @@ const cart = () => {
                             />
                             <button type="submit">Place Order</button>
                         </form>
+                        <Link href="/orders">Previous Orders</Link>
                         <p className={`success ${active ? "active" : ""}`}>
                             Order Successfull
                         </p>

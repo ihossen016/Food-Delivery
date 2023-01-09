@@ -355,18 +355,18 @@ section {
 #cart-section {
     padding: 70px 0;
 }
-#cart-section table {
+table {
     width: 100%;
     margin: 50px 0;
 }
-#cart-section table,
+table,
 th,
 td {
     border: 1px solid var(--black);
     text-align: center;
     border-collapse: collapse;
 }
-#cart-section th,
+th,
 td {
     padding: 10px 0;
 }
@@ -381,12 +381,16 @@ td {
 #cart-section .item-remove {
     cursor: pointer;
 }
+.checkout {
+    text-align: center;
+}
 .checkout form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    margin-bottom: 5px;
 }
 .checkout input {
     padding: 10px;
@@ -404,6 +408,10 @@ td {
     color: #fff;
     cursor: pointer;
 }
+.checkout a {
+    text-decoration: none;
+    color: var(--yellow);
+}
 .price p {
     width: 200px;
     padding: 10px;
@@ -419,3 +427,9 @@ td {
     display: block;
 }
 /* Cart Page End */
+
+/* Order Page Start */
+#orders-section {
+    padding: 50px 0;
+}
+/* Order Page End */
