@@ -20,7 +20,6 @@ const orders = () => {
             })
             .then(response => {
                 setOrders(response.data);
-                console.log(response);
             })
             .catch(error => {
                 console.log(error);
