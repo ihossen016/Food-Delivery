@@ -20,18 +20,18 @@ const cart = () => {
                 <h2>Your Cart</h2>
 
                 <table>
-                    <thead>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Vat</th>
-                        <th>Action</th>
-                    </thead>
-
                     <tbody>
+                        <tr>
+                            <td>#</td>
+                            <td>Name</td>
+                            <td>Quantity</td>
+                            <td>Price</td>
+                            <td>Vat</td>
+                            <td>Action</td>
+                        </tr>
+
                         {cartItems.map((item, index) => (
-                            <tr>
+                            <tr key={index}>
                                 <td>{index + 1}</td>
                                 <td>{item.name}</td>
                                 <td>{item.quantity}</td>
