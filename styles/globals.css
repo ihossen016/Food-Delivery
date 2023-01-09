@@ -372,11 +372,50 @@ td {
 }
 #cart-total {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 50px;
     font-weight: 500;
-    text-align: right;
 }
 #cart-section .item-remove {
     cursor: pointer;
+}
+.checkout form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.checkout input {
+    padding: 10px;
+    width: 450px;
+    background: none;
+    border: 1px solid var(--black);
+    outline: none;
+}
+.checkout button {
+    width: 450px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+    background: var(--black);
+    color: #fff;
+    cursor: pointer;
+}
+.price p {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid var(--black);
+}
+.success {
+    margin-top: 30px;
+    text-align: center;
+    color: var(--bg-green);
+    display: none;
+}
+.success.active {
+    display: block;
 }
 /* Cart Page End */
