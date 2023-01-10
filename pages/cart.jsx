@@ -119,7 +119,7 @@ const cart = () => {
                             />
                             <button type="submit">Place Order</button>
                         </form>
-                        <Link href="/orders">Previous Orders</Link>
+                        <Link href="/orders">Show Previous Orders</Link>
                         <p className={`success ${active ? "active" : ""}`}>
                             Order Successfull
                         </p>
